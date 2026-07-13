@@ -36,6 +36,9 @@ copyright = '© 2026 Gleeful Galvanism'
       allowRead = ['.', '*']
 
 [params]
+  # Initial data-theme attribute before JS runs; assets/js/dark-mode.js
+  # override also defaults to dark instead of following OS preference
+  defaultTheme = 'dark'
   author = 'Astraea Leary, Kiwi Issa, Deviant Ollam'
   subtitle = 'Violet wands, electricity, and the human body'
   description = 'A talk on violet wands, electricity, and the human body, plus a curated list of resources.'
