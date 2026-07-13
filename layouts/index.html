@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <div class="content-section">
+    <h1>{{ .Title | markdownify }}</h1>
+    {{ with .Content }}
+      <div>{{ . }}</div>
+    {{ end }}
+
+    <section class="awesome-links">
+      {{ $url := "https://raw.githubusercontent.com/1337kiwi/gleeful-galvanism/main/README.md" }}
+      {{ with try (resources.GetRemote $url) }}
+        {{ with .Err }}
+          {{ errorf "Failed to fetch awesome list from %q: %s" $url . }}
+        {{ else with .Value }}
+          {{ .Content | markdownify }}
+        {{ else }}
+          {{ errorf "Awesome list not found at %q" $url }}
+        {{ end }}
+      {{ end }}
+    </section>
+  </div>
+{{ end }}

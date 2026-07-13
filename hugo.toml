@@ -1,0 +1,102 @@
+baseURL = 'https://gleefulgalvanism.com/'
+locale = 'en-us'
+title = 'Gleeful Galvanism'
+copyright = '© 2026 Gleeful Galvanism'
+
+[languages]
+  [languages.en]
+    label = 'English'
+    weight = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Required to render inline HTML, e.g. in the awesome-list README
+      # fetched from GitHub. Only render trusted content.
+      unsafe = true
+
+[build]
+  # Merge build config of the theme
+  _merge = "deep"
+
+[outputs]
+  # The search requires rendering the theme's `searchIndex` output format
+  home = ["html", "rss", "searchIndex"]
+
+[caches]
+  [caches.getresource]
+    # Keep the awesome-list README fetch fresh across builds
+    maxAge = '10m'
+
+[params]
+  author = 'TODO: speaker names'
+  subtitle = 'Violet wands, electricity, and the human body'
+  description = 'A talk on violet wands, electricity, and the human body, plus a curated list of resources.'
+
+  [params.logo]
+    text = 'gleefulgalvanism'
+    url = '/'
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about'
+    weight = 20
+
+[module]
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-theme-gruvbox"
+    # Explicit mounts so the theme's demo content (blog posts, CV, about)
+    # is excluded from the build.
+    [[module.imports.mounts]]
+      source = "assets"
+      target = "assets"
+    [[module.imports.mounts]]
+      source = "data"
+      target = "data"
+    [[module.imports.mounts]]
+      source = "layouts"
+      target = "layouts"
+    [[module.imports.mounts]]
+      source = "static"
+      target = "static"
+    [[module.imports.mounts]]
+      source = "i18n"
+      target = "i18n"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/prismjs"
+    target = "assets/prismjs"
+  [[module.mounts]]
+    source = "node_modules/prism-themes/themes"
+    target = "assets/prism-themes"
+  [[module.mounts]]
+    source = "node_modules/typeface-fira-code/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/typeface-roboto-slab/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/@tabler/icons/icons"
+    target = "assets/tabler-icons"
+  [[module.mounts]]
+    # Add hugo_stats.json to Hugo's server watcher
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
