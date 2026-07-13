@@ -36,7 +36,7 @@ copyright = '© 2026 Gleeful Galvanism'
       allowRead = ['.', '*']
 
 [params]
-  author = 'TODO: speaker names'
+  author = 'Astraea Leary, Kiwi Issa, Deviant Ollam'
   subtitle = 'Violet wands, electricity, and the human body'
   description = 'A talk on violet wands, electricity, and the human body, plus a curated list of resources.'
 
