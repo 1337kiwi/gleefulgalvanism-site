@@ -3,22 +3,21 @@ title: "About"
 description: "About the speakers."
 ---
 
-<!-- TODO: replace all placeholder names and bios below -->
 
 The speakers behind the talk on violet wands, electricity, and the human
 body.
 
-## Speaker One
+## Astraea Leary
 
-Placeholder bio for the first speaker. Who they are, what they do, and why
-they know an alarming amount about running electricity across human skin.
+Astraea is an OT/SCADA engineer, PMP, and electricity enthusiast.
 
-## Speaker Two
+## Kiwi Issa
 
-Placeholder bio for the second speaker. Background, credentials, and their
-role in the talk.
+Kiwi is a vulnerability researcher and security engineer that likes making things work in ways they're not supposed to. Also knows an alarming amount about running electricity across human skin.
+[Site](https://spacecriminal.com)
 
-## Speaker Three
+Also owns a [very cute dog](https://spacecriminal.com/assets/images/zuko2.png)
 
-Placeholder bio for the third speaker. Background, credentials, and their
-role in the talk.
+## Deviant Ollam 
+
+Deviant is a connector of people, whether that happens by opening locked door or opening closed minds. 
