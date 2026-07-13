@@ -20,8 +20,8 @@ copyright = '© 2026 Gleeful Galvanism'
   _merge = "deep"
 
 [outputs]
-  # The search requires rendering the theme's `searchIndex` output format
-  home = ["html", "rss", "searchIndex"]
+  # Search is disabled (header/footer overrides), so no searchIndex output
+  home = ["html", "rss"]
 
 [caches]
   [caches.getresource]
