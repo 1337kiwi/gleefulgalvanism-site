@@ -28,6 +28,13 @@ copyright = '© 2026 Gleeful Galvanism'
     # Keep the awesome-list README fetch fresh across builds
     maxAge = '10m'
 
+[security]
+  [security.node]
+    [security.node.permissions]
+      # The theme's postcss.config.js lives in Hugo's module cache, which
+      # Node's permission model blocks on Cloudflare Pages builds.
+      allowRead = ['.', '*']
+
 [params]
   author = 'TODO: speaker names'
   subtitle = 'Violet wands, electricity, and the human body'
